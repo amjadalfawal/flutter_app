@@ -6,7 +6,7 @@ import 'constant/size.dart';
 import 'locator.dart';
 import './constant/route_paths.dart' as routes;
 import './Router.dart' as router;
-
+import './screens/welcome_widget/welcome_widget.dart';
 void main() {
   setupLocator();
 
@@ -25,11 +25,7 @@ class _MyApp extends State<MyApp> {
 
     return Stack(children: <Widget>[
     
-      Scaffold(
-          body: Center(
-            child: Localizations.localeOf(context).languageCode == "en" ?  Text('initial page') : Text('arabic pages') ,
-          ),
-        ),
+        WelcomeWidget(),
       new Positioned(
         
         child: new FloatingActionButton(
@@ -66,7 +62,7 @@ class MyApptest extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           EasylocaLizationDelegate(locale: data.locale, path: 'resources'),
         ],
-        supportedLocales: [Locale('en', 'US'), Locale('ar', 'DZ')],
+        supportedLocales: [Locale('ar', 'DZ') , Locale('en', 'US')],
         locale: data.savedLocale,
         theme: ThemeData(
           primarySwatch: Colors.blue,
