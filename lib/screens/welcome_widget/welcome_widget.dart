@@ -50,10 +50,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> with SingleTickerProvider
               0,
               1,
             ],
-            colors: [
-              Color.fromARGB(255, 248, 132, 98),
-              Color.fromARGB(255, 140, 28, 140),
-            ],
+            colors: AppColors.gradiantColors
           ),
         ),
         child: Column(
